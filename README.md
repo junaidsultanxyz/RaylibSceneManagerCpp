@@ -7,7 +7,7 @@ Here is youtube video for complete explanation: [Click Here](https://www.youtube
 
 ## Features
 
-* **Scene Management:** Easy scene switching (e.g., Menu <-> Gameplay <-> GameOver).
+* **Scene Management:** Easy scene switching
 * **Template:** Ready to use game template to get started easily.
 * **Modular Architecture:** Every scene logic is written in its respective file, promising clean and easy to 
 * **Automated Build:** Uses CMake `FetchContent` to automatically download and compile Raylib (no manual installation required).
@@ -15,7 +15,11 @@ Here is youtube video for complete explanation: [Click Here](https://www.youtube
 
 ---
 
-## Build Instructions
+## Instructions
+### Prerequisites
+- Install [Cmake](https://cmake.org/download/)
+- Install C++
+### Setup
 1. **Clone repository**
     ``` Bash
     git clone https://github.com/junaidsultanxyz/RaylibSceneManagerCpp.git
