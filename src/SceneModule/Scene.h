@@ -7,10 +7,11 @@
 
 class Scene {
 protected:
-    ~Scene() = default;
     bool isPaused = false;
 
 public:
+    virtual ~Scene() = default;
+
     void setPaused(const bool paused) { this->isPaused = paused; }
     bool getPaused() const { return this->isPaused; }
 

@@ -23,6 +23,7 @@ void Game::StartGame() {
         SceneManager::Start();
         EndDrawing();
     }
+    SceneManager::CleanUp(); // deletes the Scene* from the map
     CloseWindow();
 }
 

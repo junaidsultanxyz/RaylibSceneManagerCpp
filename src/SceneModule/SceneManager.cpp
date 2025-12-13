@@ -39,4 +39,9 @@ void SceneManager::Start() {
     }
 }
 
-
+void SceneManager::CleanUp() {
+    for (const auto& pair : scenes) {
+        delete pair.second;
+    }
+    scenes.clear();
+}

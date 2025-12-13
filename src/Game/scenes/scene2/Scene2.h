@@ -9,7 +9,7 @@
 
 class Scene2 final : public virtual Scene {
 public:
-    virtual ~Scene2() = default;
+    ~Scene2() override = default;
 
     void draw() override;
     void update() override;

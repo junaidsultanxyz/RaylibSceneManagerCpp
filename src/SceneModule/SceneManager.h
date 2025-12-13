@@ -21,6 +21,7 @@ public:
     static void addScene(const std::string& title, Scene* scene);
     static void removeScene(const std::string &title);
 
+    static void CleanUp();
     static void Start();
 };
 
