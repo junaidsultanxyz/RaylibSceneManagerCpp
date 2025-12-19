@@ -10,9 +10,6 @@
 #include "../scenes/scene1/Scene1.h"
 #include "../scenes/scene2/Scene2.h"
 
-Scene* scene1 = new Scene1();
-Scene* scene2 = new Scene2();
-
 void Game::StartGame() {
     setScenes();
 
