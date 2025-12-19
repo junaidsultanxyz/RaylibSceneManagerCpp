@@ -13,7 +13,6 @@ void Scene1::draw() {
 
     ClearBackground(RAYWHITE);
     DrawText("Scene 1", DISPLAY_WIDTH/2 - font*2, DISPLAY_HEIGHT/2 - font, font, LIGHTGRAY );
-
     if (IsKeyDown(KEY_F2)) SceneManager::setCurrentScene("scene2");
 }
 

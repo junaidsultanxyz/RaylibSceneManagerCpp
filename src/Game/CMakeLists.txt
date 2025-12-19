@@ -1,15 +1,9 @@
 # Define the Executable
-add_executable(Game
-        main.cpp
-        settings.h
-        scenes/scene1/Scene1.cpp
-        scenes/scene1/Scene1.h
-        scenes/scene2/Scene2.cpp
-        scenes/scene2/Scene2.h
-        game/Game.cpp
-        game/Game.h
+file(GLOB_RECURSE GAME_SOURCES
+    "*.cpp"
+    "*.h"
 )
-
+add_executable(Game ${GAME_SOURCES})
 # Link the Engine
 target_link_libraries(Game PRIVATE Engine)
 

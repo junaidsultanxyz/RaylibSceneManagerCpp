@@ -1,9 +1,10 @@
 # Define the Engine Library
-add_library(Engine STATIC
-        SceneManager.cpp
-        SceneManager.h
-        Scene.h
+file(GLOB_RECURSE ENGINE_SOURCES
+    "*.cpp"
+    "*.h"
 )
+
+add_library(Engine STATIC ${ENGINE_SOURCES})
 
 # Setup Include Directories
 # "BUILD_INTERFACE" lets the Engine find headers locally
