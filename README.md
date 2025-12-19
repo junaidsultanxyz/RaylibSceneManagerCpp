@@ -9,35 +9,91 @@ Here is youtube video for complete explanation: [Click Here](https://www.youtube
 
 * **Scene Management:** Easy scene switching
 * **Template:** Ready to use game template to get started easily.
-* **Modular Architecture:** Every scene logic is written in its respective file, promising clean and easy to 
+* **Modular Architecture:** Every scene logic is written in its respective file, promising clean and easy to maintain code
 * **Automated Build:** Uses CMake `FetchContent` to automatically download and compile Raylib (no manual installation required).
-* **Cross-Platform:** Works on Windows, macOS, and Linux.
+* **Cross-Platform:** Works on Windows, macOS, and Linux with auto-detected compilers.
 
 ---
 
-## Instructions
-### Prerequisites
-- Install [Cmake](https://cmake.org/download/)
-- Install C++
-### Setup
-1. **Clone repository**
-    ``` Bash
+## Prerequisites
+
+### All Platforms
+- CMake 3.15 or higher ([Download Here](https://cmake.org/download/))
+- A C++17 compatible compiler
+- Git (for fetching Raylib)
+
+### Platform-Specific Requirements
+
+**Windows:**
+- MinGW-w64 with g++ OR Visual Studio 2019+ with MSVC
+
+**macOS:**
+- Xcode Command Line Tools: `xcode-select --install`
+
+**Linux (Ubuntu/Debian):**
+```bash
+sudo apt install build-essential cmake git
+sudo apt install libx11-dev libxrandr-dev libxi-dev libgl1-mesa-dev libglu1-mesa-dev
+```
+
+---
+
+## Setup
+
+1. ### Clone repository
+  ```bash
     git clone https://github.com/junaidsultanxyz/RaylibSceneManagerCpp.git
     cd RaylibSceneManagerCpp
+  ```
+2. ### Build Project
+    ### Option 1 (Easiest)
+
+      **Windows:**
+      ```cmd
+      build.bat
+      ```
+
+      **macOS/Linux:**
+      ```bash
+      chmod +x build.sh
+      ./build.sh
+      ```
+
+    ### Option 2: Using CMake Presets
+
+    ```bash
+    cmake --preset default
+    cmake --build build --config Debug
     ```
-2. **Generate project files**
-   ``` Bash
-    mkdir build
-    cd build
-    cmake ..
-    ```
-3. **Build project**
-   ``` Bash
-   cmake --build .
-   ```
-4. **Run the game**
-  - Windows: .\src\Game\Debug\Game.exe
-  - Linux/Mac: ./src/Game/Game
+
+---
+
+## Running the Game
+When you run the build script, it prompts you to run the game iun the end as well.
+
+**Windows:**
+```cmd
+build\src\Game\Game.exe
+```
+
+**macOS/Linux:**
+```bash
+./build/src/Game/Game
+```
+
+---
+
+## Troubleshooting
+
+**CMake can't find compiler:**
+- Windows: Ensure MinGW/MSVC is in your PATH. Check with `g++ --version` or open "Developer Command Prompt for VS"
+- macOS: Install Xcode Command Line Tools with `xcode-select --install`
+- Linux: Install build-essential with `sudo apt install build-essential`
+
+**Build errors:**
+- Delete the `build/` directory and try again
+- Ensure you have internet connection (for Raylib download)
+- Check that all prerequisites are installed
 
 ---
 

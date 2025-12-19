@@ -1,0 +1,13 @@
+{
+	"InstallScripts" : 
+	[
+		"C:/Users/ASUS/Documents/coding/Raylib/SceneManagementCpp/build/cmake_install.cmake",
+		"C:/Users/ASUS/Documents/coding/Raylib/SceneManagementCpp/build/_deps/raylib-build/cmake_install.cmake",
+		"C:/Users/ASUS/Documents/coding/Raylib/SceneManagementCpp/build/_deps/raylib-build/raylib/cmake_install.cmake",
+		"C:/Users/ASUS/Documents/coding/Raylib/SceneManagementCpp/build/_deps/raylib-build/raylib/external/glfw/cmake_install.cmake",
+		"C:/Users/ASUS/Documents/coding/Raylib/SceneManagementCpp/build/_deps/raylib-build/raylib/external/glfw/src/cmake_install.cmake",
+		"C:/Users/ASUS/Documents/coding/Raylib/SceneManagementCpp/build/src/SceneModule/cmake_install.cmake",
+		"C:/Users/ASUS/Documents/coding/Raylib/SceneManagementCpp/build/src/Game/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

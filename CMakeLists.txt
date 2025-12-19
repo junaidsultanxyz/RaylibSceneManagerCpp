@@ -1,5 +1,22 @@
-cmake_minimum_required(VERSION 4.0)
-project(MyRaylibProject VERSION 1.0 LANGUAGES CXX)
+cmake_minimum_required(VERSION 3.15)
+project(RaylibSceneManagement VERSION 1.0 LANGUAGES CXX)
+
+# Set C++ Standard
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+# --- Platform-specific settings ---
+if(WIN32)
+    # Windows specific settings
+    set(CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS ON)
+elseif(APPLE)
+    # macOS specific settings
+    set(CMAKE_OSX_DEPLOYMENT_TARGET "10.15" CACHE STRING "Minimum macOS deployment version")
+elseif(UNIX)
+    # Linux specific settings
+    # Find required packages for Linux
+    find_package(Threads REQUIRED)
+endif()
 
 # --- 1. Setup Dependencies (Raylib) ---
 include(FetchContent)
