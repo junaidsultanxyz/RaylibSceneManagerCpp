@@ -14,9 +14,8 @@ void Scene2::draw() {
     ClearBackground(RAYWHITE);
     DrawText("Scene 2", DISPLAY_WIDTH/2 - font*2, DISPLAY_HEIGHT/2 - font, font, LIGHTGRAY );
 
-    if (IsKeyDown(KEY_F1)) SceneManager::setCurrentScene("scene1");
 }
 
 void Scene2::update() {
-
+    if (IsKeyDown(KEY_F1)) SceneManager::setCurrentScene("scene1");
 }
